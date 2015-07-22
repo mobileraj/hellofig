@@ -26,7 +26,7 @@
 ;; app gets redefined on reload
 (def app (express))
 (defn say-hello! [req res]
-  (request {:method "GET" :uri "https://mobileraj:p4ssw0rd@mobileraj.cloudant.com/sent_merchants/_design/SpatialView/_geo/merchants?radius=1800&lat=30.25685&lon=-97.76659&relation=contains&include_docs=true
+  (request {:method "GET" :uri "https://mobileraj.cloudant.com/sent_merchants/_design/SpatialView/_geo/merchants?radius=1800&lat=30.25685&lon=-97.76659&relation=contains&include_docs=true
 "}
          (fn [error response body]
            (when (and (not error) (= 200 (.-statusCode response)))
@@ -37,7 +37,7 @@
 
 (defn say-hello1! [req res]
  (let [cld (chan)]
-  (request {:method "GET" :uri "https://mobileraj:p4ssw0rd@mobileraj.cloudant.com/sent_merchants/_design/SpatialView/_geo/merchants?radius=1800&lat=30.25685&lon=-97.76659&relation=contains&include_docs=true
+  (request {:method "GET" :uri "https://mobileraj.cloudant.com/sent_merchants/_design/SpatialView/_geo/merchants?radius=1800&lat=30.25685&lon=-97.76659&relation=contains&include_docs=true
 "}
         (fn [error response body]
           (when (and (not error) (= 200 (.-statusCode response)))
