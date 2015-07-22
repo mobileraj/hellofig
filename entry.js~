@@ -1,0 +1,5 @@
+require("./out.prod/goog/bootstrap/nodejs");
+require("./out.prod/helloworld/core.js");
+require("./out.prod/cljs");
+goog.require("helloworld.core");
+goog.require("cljs.nodejscli");
